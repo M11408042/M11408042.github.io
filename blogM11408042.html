@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【阿里山攻略】從伐木歷史到 2.0 森林療癒 - 現代旅遊誌</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            50: '#f2f7f2',
+                            100: '#e1ede2',
+                            200: '#c5dbc7',
+                            500: '#4a7c59',
+                            700: '#355c42',
+                            900: '#1a2e21',
+                        },
+                        mist: '#f8fafc',
+                        accent: '#d97706',
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #1a2e21;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #4a7c59 0%, #1a2e21 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4a7c59;
+            border-radius: 10px;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-body custom-scrollbar">
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 scale-105 animate-float">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-mist z-10"></div>
+            <img src='https://opal.google/board/blobs/cfe8afbd-8d70-4b22-a771-82c73a340228' alt='Alishan Banner' class="w-full h-full object-cover" />
+        </div>
+        
+        <div class="relative z-20 text-center px-6 max-w-5xl animate-fade-in-up">
+            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-widest text-white uppercase bg-forest-500/80 backdrop-blur-md rounded-full">
+                Forest Healing • 森林之光
+            </span>
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
+                【阿里山攻略】<br><span class="text-white/90">不只是看日出！</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
+                從伐木歷史到 2.0 森林療癒，這份「上山懶人包」請收好
+            </p>
+            <div class="mt-12">
+                <a href="#content" class="px-8 py-4 bg-white text-forest-900 font-bold rounded-full hover:bg-forest-500 hover:text-white transition-all duration-300 shadow-xl inline-flex items-center gap-2">
+                    探索更多 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="content" class="relative z-30 -mt-10">
+        <!-- Intro Section -->
+        <section class="max-w-4xl mx-auto px-6 mb-20">
+            <div class="glass-card p-10 md:p-16 rounded-[2.5rem] shadow-2xl relative">
+                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-forest-500 rounded-full flex items-center justify-center text-white shadow-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+                <p class="text-xl md:text-2xl leading-relaxed text-forest-900 first-letter:text-5xl first-letter:font-bold first-letter:text-forest-500 first-letter:mr-2">
+                    每當提及台灣的自然名片，「阿里山」總是那個繞不開的名字。我們或許都聽過那首膾炙人口的歌，也曾在課本裡讀過那火紅的登山小火車。但阿里山對台灣而言，僅僅是一個看日出的景點嗎？當我們站在海拔 2,000 公尺之巔，呼吸著稀薄而清冷的芬多精時，這座山帶給我們的，其實是一場跨越百年的時空對話。
+                </p>
+            </div>
+        </section>
+
+        <!-- Five Wonders Bento Grid -->
+        <section class="max-w-6xl mx-auto px-6 mb-32">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-forest-900 mb-4">阿里山究竟在紅什麼？</h2>
+                <p class="text-forest-500 font-medium">「五奇」美景先收進口袋！</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Large Item -->
+                <div class="md:col-span-2 md:row-span-2 bg-white p-8 rounded-3xl shadow-sm border border-forest-100 flex flex-col justify-between group hover:shadow-xl transition-all duration-500">
+                    <div>
+                        <div class="w-12 h-12 bg-forest-100 rounded-2xl flex items-center justify-center text-forest-500 mb-6 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">日出與晚霞</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            如果說小笠原山的晨曦象徵著希望的誕生，那麼慈雲寺的落日餘暉，則是一種與喧囂和解的溫柔。
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-gray-100 flex items-center gap-4">
+                        <span class="text-xs font-bold text-forest-500 uppercase tracking-widest">Recommended Spot</span>
+                        <span class="text-sm font-medium">小笠原山展望台</span>
+                    </div>
+                </div>
+
+                <!-- Mid Item -->
+                <div class="md:col-span-2 bg-gradient-to-br from-forest-500 to-forest-700 p-8 rounded-3xl text-white shadow-lg flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-3">森林鐵路：世界級奇蹟</h3>
+                    <p class="opacity-90 leading-relaxed">
+                        這不只是一列火車，它是世界級的登山奇蹟。獨特的「之」字形折返攀升，是人類智慧與地勢共存的印記。
+                    </p>
+                </div>
+
+                <!-- Small Items -->
+                <div class="md:col-span-1 bg-white p-6 rounded-3xl shadow-sm border border-forest-100 hover:border-forest-200 transition-colors">
+                    <div class="text-forest-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">雲海</h4>
+                    <p class="text-sm text-gray-500">秋冬限定的浪漫，看著雲浪在山巒間翻湧，心靈也變得輕盈。</p>
+                </div>
+
+                <div class="md:col-span-1 bg-forest-50 p-6 rounded-3xl shadow-sm border border-forest-100">
+                    <div class="text-forest-500 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </div>
+                    <h4 class="font-bold mb-2">森林巨木</h4>
+                    <p class="text-sm text-gray-600">在幾千年的紅檜長輩面前，人類的煩惱顯得既渺小又短暫。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="bg-forest-900 py-32 text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-forest-500 opacity-20 blur-[100px] rounded-full"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-forest-700 opacity-20 blur-[100px] rounded-full"></div>
+            
+            <div class="max-w-4xl mx-auto px-6 relative z-10">
+                <h2 class="font-display text-4xl font-bold mb-16 flex items-center gap-4">
+                    <span class="w-12 h-[2px] bg-forest-500"></span>
+                    時光機：從「砍樹」到「守護」
+                </h2>
+                
+                <div class="space-y-16">
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+                        <div class="md:w-1/4">
+                            <span class="text-5xl font-display font-black text-forest-500">1899</span>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-xl font-bold mb-4">起點：檜木林的發現</h4>
+                            <p class="text-forest-100/70 leading-relaxed">
+                                日本技師小池三九郎發現了這片珍貴的檜木林，開啟了這座山的命運轉折。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+                        <div class="md:w-1/4">
+                            <span class="text-5xl font-display font-black text-forest-500">1912</span>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-xl font-bold mb-4">通車：鐵道初啼</h4>
+                            <p class="text-forest-100/70 leading-relaxed">
+                                森林鐵道正式通車，但最初裝載的是巨大的檜木與扁柏，作為工業發展的燃料與建材。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+                        <div class="md:w-1/4">
+                            <span class="text-5xl font-display font-black text-forest-500">2024</span>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h4 class="text-xl font-bold mb-4">重生：全線復駛</h4>
+                            <p class="text-forest-100/70 leading-relaxed">
+                                經歷風災修復，林鐵迎來全線復駛，讓跨越百年的鐵道故事得以延續。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Split Layout -->
+        <section class="max-w-6xl mx-auto px-6 py-32 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <span class="text-forest-500 font-bold uppercase tracking-tighter mb-4 block">Classic Experience</span>
+                <h2 class="text-4xl font-bold text-forest-900 mb-8">經典教科書級玩法</h2>
+                <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                    <p>
+                        即便觀光型態在變，某些儀式感依然不可取代。清晨四點爬出溫暖的被窩，搭上祝山線小火車，在寒風中等待那道破曉的金光，依然是每個造訪阿里山的人最虔誠的儀式。
+                    </p>
+                    <p>
+                        而每逢 3 到 4 月，全台灣的目光都會投向這裡。染井吉野櫻盛放時的粉紅風暴，讓阿里山成了真正的夢幻之巔。漫步於姊妹潭的平靜湖面旁，你或許就能理解，為何這裡能跨越國界。
+                    </p>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-forest-100 rounded-[3rem] -rotate-3 transition-transform group-hover:rotate-0 duration-500"></div>
+                <div class="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] shadow-2xl">
+                    <img src="https://opal.google/board/blobs/cfe8afbd-8d70-4b22-a771-82c73a340228" alt="Alishan Scenery" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Thinking Section -->
+        <section class="max-w-4xl mx-auto px-6 mb-32">
+            <div class="bg-white border border-forest-100 rounded-[3rem] overflow-hidden shadow-sm">
+                <div class="bg-forest-50 px-10 py-6 border-b border-forest-100">
+                    <h3 class="font-bold text-xl flex items-center gap-3">
+                        <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+                        美麗背後的悄悄話：我們該思考的小爭議
+                    </h3>
+                </div>
+                <div class="p-10 md:p-16 space-y-10">
+                    <div class="flex gap-6">
+                        <div class="hidden md:block flex-shrink-0 w-12 h-12 bg-mist rounded-full flex items-center justify-center font-display font-bold text-forest-500">01</div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-3">人與自然的拔河</h4>
+                            <p class="text-gray-600 leading-relaxed">地質脆弱且頻繁受極端氣候威脅，林鐵的修復成本極高。我們是否願意為了維護這段歷史，支付昂貴的代價？</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="hidden md:block flex-shrink-0 w-12 h-12 bg-mist rounded-full flex items-center justify-center font-display font-bold text-forest-500">02</div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-3">土地與文化的詮釋</h4>
+                            <p class="text-gray-600 leading-relaxed">這座山更是 <strong class="text-forest-900">鄒族 (Tsou)</strong> 世代居住的家。如何讓觀光利潤與文化詮釋權重回部落手中，是我們必須面對的議題。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alishan 2.0 Feature -->
+        <section class="bg-mist py-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div>
+                        <h2 class="text-4xl font-bold text-forest-900 mb-4">阿里山 2.0</h2>
+                        <p class="text-forest-500 font-medium">未來更酷、更療癒的旅遊新趨勢</p>
+                    </div>
+                    <div class="bg-white p-2 rounded-2xl shadow-sm inline-flex">
+                        <button class="px-6 py-2 bg-forest-500 text-white rounded-xl font-bold">森林療癒</button>
+                        <button class="px-6 py-2 text-forest-700 font-medium hover:bg-forest-50 rounded-xl">智慧旅遊</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="group">
+                        <div class="mb-6 h-64 rounded-3xl overflow-hidden shadow-lg image-container">
+                            <img src="https://opal.google/board/blobs/cfe8afbd-8d70-4b22-a771-82c73a340228" alt="Forest Bathing">
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 group-hover:text-forest-500 transition-colors">森林療癒 (Forest Bathing)</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">學習如何「五感全開」，用嗅覺捕捉芬多精，用聽覺捕捉林間的私語。</p>
+                    </div>
+                    <div class="group">
+                        <div class="mb-6 h-64 rounded-3xl overflow-hidden shadow-lg image-container">
+                            <img src="https://opal.google/board/blobs/cfe8afbd-8d70-4b22-a771-82c73a340228" alt="Smart Tech">
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 group-hover:text-forest-500 transition-colors">智慧科技 AR 導覽</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">透過 AR 導覽穿越時空，看見百年前的伐木現場，歷史就在指尖流轉。</p>
+                    </div>
+                    <div class="group">
+                        <div class="mb-6 h-64 rounded-3xl overflow-hidden shadow-lg image-container">
+                            <img src="https://opal.google/board/blobs/cfe8afbd-8d70-4b22-a771-82c73a340228" alt="Sustainability">
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 group-hover:text-forest-500 transition-colors">無痕山林 (LNT)</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">永續觀光已成為新顯學，讓每一位旅客都成為大山的守護者。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="max-w-5xl mx-auto px-6 py-32 text-center">
+            <div class="inline-block p-4 mb-8 bg-forest-50 rounded-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-forest-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <h2 class="text-4xl font-bold text-forest-900 mb-10 leading-tight">
+                阿里山不只是一座山，<br>它是一部活生生的歷史書。
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-16">
+                下次上山，試著慢下腳步，聽聽森林想對你說什麼。這座山，值得你用更溫柔、更有深度的方式去閱讀它。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="px-6 py-3 border border-forest-200 rounded-full text-forest-500 font-bold hover:bg-forest-50 cursor-pointer transition-colors">#嘉義奮起湖</div>
+                <div class="px-6 py-3 border border-forest-200 rounded-full text-forest-500 font-bold hover:bg-forest-50 cursor-pointer transition-colors">#檜意森活村</div>
+                <div class="px-6 py-3 border border-forest-200 rounded-full text-forest-500 font-bold hover:bg-forest-50 cursor-pointer transition-colors">#阿里山日出</div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Smooth scroll for the CTA button
+        document.querySelector('a[href^="#"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Simple reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
